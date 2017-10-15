@@ -4,6 +4,7 @@
     "member-access": [true, "no-public"],
     "no-require-imports": false,
     "no-unused-variable": [true, "check-parameters"],
+    "no-var-requires": false,
     "quotemark": [true, "single"]
   }
 }
