@@ -1,0 +1,1 @@
+cmd_Release/test_addon.node := c++ -bundle -undefined dynamic_lookup -Wl,-no_pie -Wl,-search_paths_first -mmacosx-version-min=10.7 -arch x86_64 -L./Release -stdlib=libc++  -o Release/test_addon.node Release/obj.target/test_addon/test_addon.o 

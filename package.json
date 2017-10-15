@@ -1,0 +1,40 @@
+{
+  "name": "mocha-parallel-tests-ts-spike",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/src/index.js",
+  "bin": {
+    "mocha-parallel-tests": "dist/bin/cli.js"
+  },
+  "scripts": {
+    "build": "./node_modules/.bin/tsc && chmod +x dist/bin/cli.js",
+    "clean": "rm -fr dist/",
+    "lint": "./node_modules/.bin/tslint  -p . -c tslint.json 'src/**/*.ts'",
+    "prepublish": "npm run build",
+    "test": "npm run lint && ./test/index.sh"
+  },
+  "author": "Dmitrii Sorin <info@staypositive.ru>",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@types/mocha": "^2.2.43",
+    "@types/node": "^8.0.34",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "cheerio": "^0.22.0",
+    "mocha": "^4.0.1",
+    "mocha-jenkins-reporter": "^0.3.9",
+    "mocha-teamcity-reporter": "^1.1.1",
+    "mochawesome": "^2.3.1",
+    "node-gyp": "^3.6.2",
+    "selenium-webdriver": "^3.6.0",
+    "ts-node": "^3.3.0",
+    "tslint": "^5.7.0",
+    "typescript": "^2.5.3"
+  },
+  "dependencies": {
+    "test_addon": "file:test/node-addon/test_addon"
+  },
+  "peerDependencies": {
+    "mocha": "^4.0.1"
+  }
+}
